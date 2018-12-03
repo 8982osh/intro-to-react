@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Very First Non-Reactive Dog</title>
+  </head>
+  <body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+      
+      <div id="app"></div>
+        
+        <script type="text/babel">
+          class Dog extends React.Component {
+            constructor(props) { 
+              super(props);
+              this.state = {
+              name: 'Gustaf',
+              breed: 'Shepherd',
+              age: '3 years old'
+              };
+            }
+
+            render() {
+              return (
+              
+              <div>
+               <h1>It Is A Dog's World!</h1>
+               <h2>Why is {this.state.name} a good boy?</h2>
+                 <ul>
+                   <li>{this.state.breed} knows how to sit.</li>
+                   <li>Friendly with the ladies.</li>
+                   <li>Likes to be the top dawg, even at {this.state.age}.</li>
+                 </ul>
+              </div>
+            );
+          }
+        }
+     
+       ReactDOM.render(<Dog />, document.getElementById('app'));
+       
+     </script> 
+  </body>
+</html>
+
